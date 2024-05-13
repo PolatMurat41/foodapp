@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import styles from "./search.module.css";
 const URL = "https://api.spoonacular.com/recipes/complexSearch";
-const API_KEY = "35bde87d6301487497fb7ef9b3b34719";
+const API_KEY = "e53f1dbc4e64485ca11f9001bc5517ef";
 export default function Search({ foodData, setFoodData }) {
   const [query, setQurey] = useState("pizza");
   // Syntax of the useEffect hook
@@ -16,7 +16,8 @@ export default function Search({ foodData, setFoodData }) {
   }, [query]);
   return (
     <div className={styles.searchContainer}>
-      <input className={styles.input}
+      <input
+        className={styles.input}
         value={query}
         onChange={(e) => setQurey(e.target.value)}
         type="text"
